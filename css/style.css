@@ -7,6 +7,89 @@ body {
   font-weight: 300;
   position: relative;
 }
+/* extra.css - 3D + responsive polish */
+
+:root{
+  --glass-bg: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.06);
+  --accent: #7C3AED;
+}
+
+#three-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Make sure hero text appears above canvas */
+.cover-v1, .cover-v1 * { position: relative; z-index: 2; }
+.cover-v1 { overflow: visible; position: relative; }
+
+/* Portfolio item 3D tilt base */
+.portfolio-item {
+  transform-style: preserve-3d;
+  transition: transform 0.35s cubic-bezier(.2,.9,.25,1), box-shadow 0.35s;
+  will-change: transform;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+.portfolio-item img {
+  display:block;
+  width:100%;
+  height:auto;
+  transition: transform 0.45s ease, filter 0.45s;
+  border-radius: 6px;
+}
+.portfolio-item:hover {
+  transform: translateZ(18px) scale(1.03);
+}
+.portfolio-item:hover img {
+  transform: translateZ(28px) scale(1.04);
+  filter: saturate(1.05) contrast(1.03);
+  box-shadow: 0 30px 50px rgba(12,12,20,0.35);
+}
+
+/* Glassmorphism cards for about & contact */
+.dotted-bg, .form-outline-style-v1, .unslate_co--sticky {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(6px) saturate(120%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+/* Responsive text sizing */
+.heading { font-size: clamp(1.75rem, 4vw, 3.4rem); }
+.subheading { font-size: clamp(1rem, 2.2vw, 1.6rem); }
+
+/* Loader hide (if original loader exists) gracefully */
+.loader-portfolio-wrap { display:none !important; }
+
+/* Small screens: stack portfolio to 1 column */
+@media (max-width: 768px) {
+  #posts .item { flex: 0 0 50%; max-width:50%; }
+}
+@media (max-width: 520px) {
+  #posts .item { flex: 0 0 100%; max-width:100%; }
+  .site-logo { left: 16px; right:auto; }
+  .site-nav-ul { display:none !important; }
+}
+
+/* Cursor glow */
+.cursor-glow {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  mix-blend-mode: screen;
+  transition: opacity .15s ease;
+  opacity: 0.12;
+  background: radial-gradient(circle at 30% 30%, rgba(124,58,237,0.85), rgba(124,58,237,0.25) 35%, rgba(124,58,237,0.06) 60%, transparent 70%);
+}
 
 body:before {
   content: "";
