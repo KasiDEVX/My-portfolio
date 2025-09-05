@@ -219,6 +219,157 @@ a, a:ver {
   bottom: 0;
 }
 
+.education-section {
+  padding: 2rem;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 50px; /* space for the vertical line */
+  border-left: 3px solid rgba(255,255,255,0.2);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-logo {
+  position: absolute;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+}
+
+.timeline-logo img {
+  width: 60%;
+  transform: rotate(-45deg); /* undo tilt for logo */
+}
+
+.timeline-content {
+  margin-left: 60px;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.timeline-content p {
+  margin: 0.25rem 0;
+}
+
+.certificates-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.certificates-section h2 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.certificate-text:hover{
+  color: #ffffff; /* Base text color, often white or a very light version of the neon color */
+  text-shadow:
+    0 0 5px rgb(187, 45, 45),   /* Closer, brighter glow */
+    0 0 10px rgb(175, 48, 48),
+    0 0 20px rgb(196, 26, 26),
+    0 0 40px rgb(182, 25, 25),  /* Further, more diffuse glow */
+    0 0 80px rgb(184, 29, 29),
+    0 0 90px rgb(170, 25, 25),
+    0 0 100px rgb(172, 24, 48);
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.certificate-card {
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.certificate-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.certificate-card {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(10px);           /* glass effect */
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
 .site-loader-wrap {
   z-index: 7700;
   position: fixed;

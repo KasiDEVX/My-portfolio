@@ -182,7 +182,17 @@ var siteMenuClone = function() {
   });
 
 }; 
-
+function openModal(src) {
+	const modal = document.getElementById("certModal");
+	const fullImg = document.getElementById("fullCert");
+	fullImg.src = src;
+	modal.style.display = "flex";
+  }
+  
+  function closeModal() {
+	document.getElementById("certModal").style.display = "none";
+  }
+  
 
 
 
