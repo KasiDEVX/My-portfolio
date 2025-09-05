@@ -531,7 +531,14 @@ var jarallaxPlugin = function() {
     videoEndTime: 70,
 	});
 };
+function openModal(imageSrc) {
+    document.getElementById('certModal').style.display = 'block';
+    document.getElementById('fullCert').src = imageSrc;
+}
 
+function closeModal() {
+    document.getElementById('certModal').style.display = 'none';
+}
 var contactForm = function() {
 	if ($('#contactForm').length > 0 ) {
 		$( "#contactForm" ).validate( {

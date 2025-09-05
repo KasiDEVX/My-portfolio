@@ -8,17 +8,15 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-KXWPBEWCYM');
 </script>
 
     <title>Kasi's Portfolio &mdash; ☀️</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <meta name="description" content="A onepage portfolio HTML template by Unslate.co">
-    <meta name="keywords" content="html, css, javascript, jquery">
-    <meta name="author" content="Unslate.co">
+    <meta name="description" content="Kasi Vishwanathan - Web Designer & Developer Portfolio">
+    <meta name="keywords" content="web design, frontend, portfolio, html, css, javascript">
+    <meta name="author" content="Kasi Vishwanathan">
 
     <link rel="stylesheet" href="css/vendor/icomoon/style.css">
     <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
@@ -26,7 +24,9 @@
     <link rel="stylesheet" href="css/vendor/animate.min.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
@@ -218,8 +218,67 @@
           </div>
         </div>
       </div>
-
-
+      <section id="education" class="education-section">
+        <h2 class="heading-h2">Education</h2>
+        <div class="timeline">
+          
+          <!-- School -->
+          <div class="timeline-item">
+            <div class="timeline-logo">
+              <img src="images/school-logo.png" alt="Spectrum School Logo">
+            </div>
+            <div class="timeline-content dotted-bg glass-carded">
+              <h3 class="text-black" >Spectrum Matric Higher Sec School</h3>
+              <p class="text-left">1st - 12th Standard</p>
+            </div>
+          </div>
+      
+          <!-- College -->
+          <div class="timeline-item">
+            <div class="timeline-logo1">
+              <img src="images/college-logo.png" alt="Ramco Institute Logo">
+            </div>
+            <div class="timeline-content dotted-bg glass-card">
+              <h3 class="text-black" >Ramco Institute of Technology</h3>
+              <p class="text-left">Computer Science and Business Systems</p>
+              <p class="text-left">2nd Year</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="certificates" class="certificates-section">
+        <div class="container">
+            <h2 class="heading-h2">Certificates</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <img src="images/cert1.png" alt="Bootstrap Certificate" onclick="openModal(this.src)">
+                    <h3>Bootstrap Certificate</h3>
+                    <p>Completed Bootstrap course on FreeCodeCamp platform</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/cert2.png" alt="HTML CSS Certificate" onclick="openModal(this.src)">
+                    <h3>HTML & CSS Certificate</h3>
+                    <p>Mastered Responsive web design on FreeCodeCamp platform</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/cert3.jpeg" alt="Coding Badge" onclick="openModal(this.src)">
+                    <h3>Coding Badge</h3>
+                    <p>Completed 500 Problems on Codechef platform</p>
+                </div>
+                <div class="certificate-card">
+                    <img src="images/cert4.jpeg" alt="Consistency Badge" onclick="openModal(this.src)">
+                    <h3>Consistency Badge</h3>
+                    <p>Achieved 100 Days Streak on Codechef platform</p>
+                </div>
+            </div>
+        </div>
+        
+          <!-- Modal -->
+          <div id="certModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="fullCert">
+          </div>
+        </section>
 
       <div class="unslate_co--section">
         <div class="container">
