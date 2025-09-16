@@ -1,48 +1,46 @@
 <?php
 
-// Replace this with your own email address
-$to = 'joefrey.mahusay@gmail.com';
+// Ensure the script is only executed via POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Sanitize and validate inputs
+    $name = isset($_POST['name']) ? htmlspecialchars(trim($_POST['name'])) : 'Anonymous';
+    $email = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL) : null;
+    $subject = isset($_POST['subject']) ? htmlspecialchars(trim($_POST['subject'])) : 'Contact Form Submission';
+    $contact_message = isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : '';
 
-function url(){
-  return sprintf(
-    "%s://%s",
-    isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-    $_SERVER['SERVER_NAME']
-  );
-}
+    // Check if required fields are provided
+    if (!$email || empty($contact_message)) {
+        echo "Invalid input. Please provide a valid email and message.";
+        exit;
+    }
 
-if($_POST) {
+    // Set the recipient email address (replace with your email)
+    $to = "your-email@example.com";
 
-   $name = trim(stripslashes($_POST['name']));
-   $email = trim(stripslashes($_POST['email']));
-   $subject = trim(stripslashes($_POST['subject']));
-   $contact_message = trim(stripslashes($_POST['message']));
+    // Construct the email message
+    $message = "Email from: " . $name . "<br />";
+    $message .= "Email address: " . $email . "<br />";
+    $message .= "Message: <br />";
+    $message .= nl2br($contact_message);
+    $message .= "<br /> ----- <br /> This email was sent from your site's contact form.";
 
-   
-	if ($subject == '') { $subject = "Contact Form Submission"; }
+    // Set the From header
+    $from = $name . " <" . $email . ">";
 
-   // Set Message
-   $message .= "Email from: " . $name . "<br />";
-	 $message .= "Email address: " . $email . "<br />";
-   $message .= "Message: <br />";
-   $message .= nl2br($contact_message);
-   $message .= "<br /> ----- <br /> This email was sent from your site " . url() . " contact form. <br />";
+    // Email Headers
+    $headers = "From: " . $from . "\r\n";
+    $headers .= "Reply-To: " . $email . "\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-   // Set From: header
-   $from =  $name . " <" . $email . ">";
-
-   // Email Headers
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $email . "\r\n";
- 	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-
-   ini_set("sendmail_from", $to); // for windows server
-   $mail = mail($to, $subject, $message, $headers);
-
-	if ($mail) { echo "OK"; }
-   else { echo "Something went wrong. Please try again."; }
-
+    // Send the email
+    if (mail($to, $subject, $message, $headers)) {
+        echo "OK";
+    } else {
+        echo "Something went wrong. Please try again.";
+    }
+} else {
+    echo "Invalid request method.";
 }
 
 ?>
