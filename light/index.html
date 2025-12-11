@@ -193,31 +193,64 @@
         </div>
       </section>
       <section id="certificates" class="certificates-section">
-        <div class="container">
-            <h2 class="heading-h2">Certificates</h2>
-            <div class="certificates-grid">
-                <div class="certificate-card">
-                    <img src="images/cert1.png" alt="Bootstrap Certificate" onclick="openModal(this.src)">
-                    <h3>Bootstrap Certificate</h3>
-                    <p>Completed Bootstrap course on FreeCodeCamp platform</p>
-                </div>
-                <div class="certificate-card">
-                    <img src="images/cert2.png" alt="HTML CSS Certificate" onclick="openModal(this.src)">
-                    <h3>HTML & CSS Certificate</h3>
-                    <p>Mastered Responsive web design on FreeCodeCamp platform</p>
-                </div>
-                <div class="certificate-card">
-                    <img src="images/cert3.jpeg" alt="Coding Badge" onclick="openModal(this.src)">
-                    <h3>Coding Badge</h3>
-                    <p>Completed 500 Problems on Codechef platform</p>
-                </div>
-                <div class="certificate-card">
-                    <img src="images/cert4.jpeg" alt="Consistency Badge" onclick="openModal(this.src)">
-                    <h3>Consistency Badge</h3>
-                    <p>Achieved 100 Days Streak on Codechef platform</p>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <h2 class="heading-h2">Certificates</h2>
+
+    <div class="certificates-grid">
+
+      <div class="certificate-card">
+        <img src="images/cert1.png" alt="Bootstrap Certificate" onclick="openModal(this.src)">
+        <h3>Bootstrap Certificate</h3>
+        <p>Completed Bootstrap course on FreeCodeCamp platform</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="images/cert2.png" alt="HTML CSS Certificate" onclick="openModal(this.src)">
+        <h3>HTML & CSS Certificate</h3>
+        <p>Mastered Responsive Web Design on FreeCodeCamp platform</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="images/cert3.jpeg" alt="Coding Badge" onclick="openModal(this.src)">
+        <h3>Coding Badge</h3>
+        <p>Completed 500+ problems on CodeChef platform</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="images/cert4.jpeg" alt="Consistency Badge" onclick="openModal(this.src)">
+        <h3>Consistency Badge</h3>
+        <p>Achieved 100 Days Streak on CodeChef platform</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="images/cert5.jpeg" alt="AWS Solutions Architecture" onclick="openModal(this.src)">
+        <h3>AWS Solutions Architecture</h3>
+        <p>Completed AWS Solutions Architecture Virtual Experience Program</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="images/cert6.jpeg" alt="LinkedIn Prompt Engineering" onclick="openModal(this.src)">
+        <h3>LinkedIn Prompt Engineering</h3>
+        <p>Earned Prompt Engineering Certificate demonstrating AI prompt mastery</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="images/cert7.jpeg" alt="TATA Cybersecurity Analyst" onclick="openModal(this.src)">
+        <h3>TATA Cybersecurity Analyst</h3>
+        <p>Completed TATA Cybersecurity Analyst Virtual Experience Program</p>
+      </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="certModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="fullCert">
+    </div>
+
+  </div>
+</section>
+
           <!-- Modal -->
           <div id="certModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -305,128 +338,6 @@
           </div>
         </div>
       </div>
-      <!-- END .counter -->
-      <!--  <div class="unslate_co--section" id="testimonial-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Happy Clients</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
-        </div>
-        <div class="owl-carousel testimonial-slider">
-          <div>
-            <div class="testimonial-v1">
-              <div class="testimonial-inner-bg">
-                <span class="quote">&ldquo;</span>
-                <blockquote>
-                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                </blockquote>
-              </div>
-              <div class="testimonial-author-info">
-                <img src="images/person_man_1.jpg" alt="Image">
-                <h3>Eric Ingram</h3>
-                <span class="d-block position">Product Designer @facebook</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="testimonial-v1">
-              <div class="testimonial-inner-bg">
-                <span class="quote">&ldquo;</span>
-                <blockquote>
-                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                </blockquote>
-              </div>
-              <div class="testimonial-author-info">
-                <img src="images/person_man_2.jpg" alt="Image">
-                <h3>Ryan Mullins</h3>
-                <span class="d-block position">Product Designer @Shopify</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="testimonial-v1">
-              <div class="testimonial-inner-bg">
-                <span class="quote">&ldquo;</span>
-                <blockquote>
-                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                </blockquote>
-              </div>
-              <div class="testimonial-author-info">
-                <img src="images/person_woman_1.jpg" alt="Image">
-                <h3>Erica Miller</h3>
-                <span class="d-block position">Product Designer @Twitter</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="unslate_co--section" id="journal-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Journal</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
-          <div class="row gutter-v4 align-items-stretch">
-            <div class="col-sm-6 col-md-6 col-lg-8 blog-post-entry" data-aos="fade-up" data-aos-delay="0">
-              <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>A Mounteering Guide For Beginners</h3>
-                    <p class="post-meta">By Joefrey <span class="small">&bullet;</span> 5 mins read</p>
-                  </div>
-                </div>
-                <img src="images/post_1.jpg" class="lazyload" alt="Image" />
-              </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="100">
-              <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>A Mounteering Guide For Beginners</h3>
-                    <p class="post-meta">By Joefrey <span class="small">&bullet;</span> 5 mins read</p>
-                  </div>
-                </div>
-                <img src="images/post_2.jpg" class="lazyload" alt="Image" />
-              </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="0">
-              <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>A Mounteering Guide For Beginners</h3>
-                    <p class="post-meta">By Joefrey <span class="small">&bullet;</span> 5 mins read</p>
-                  </div>
-                </div>
-                <img src="images/post_3.jpg" class="lazyload" alt="Image" />
-              </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="100">
-              <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>A Mounteering Guide For Beginners</h3>
-                    <p class="post-meta">By Joefrey <span class="small">&bullet;</span> 5 mins read</p>
-                  </div>
-                </div>
-                <img src="images/post_4.jpg" class="lazyload" alt="Image" />
-              </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="200">
-              <a href="blog-single.html" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>A Mounteering Guide For Beginners</h3>
-                    <p class="post-meta">By Joefrey <span class="small">&bullet;</span> 5 mins read</p>
-                  </div>
-                </div>
-                <img src="images/post_5.jpg" class="lazyload" alt="Image" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>-->
-      <!-- END blog posts -->
       <div class="unslate_co--section" id="contact-section">
         <div class="container">
           <div class="section-heading-wrap text-center mb-5">
@@ -466,16 +377,12 @@
               <div class="contact-info-v1">
                 <div class="gsap-reveal d-block">
                   <span class="d-block contact-info-label">Gmail</span>
-                  <a href="mailto:kasivishwanathan2007@gmail.com" class="contact-info-val">kasivishwanathan2007@gmail.com</a>
+                  <a href="mailto:kasivishwanathan2007@gmail.com" class="contact-info-val">kasi.offcl@gmail.com</a>
                 </div>
                 <div class="gsap-reveal d-block">
                   <span class="d-block contact-info-label">Phone</span>
                   <a href="#" class="contact-info-val">+91 7397473631</a>
-                </div>
-                <div class="gsap-reveal d-block">
-                  <span class="d-block contact-info-label">Address</span>
-                  <address class="contact-info-val">1-7-36/1,East Street, <br> Elathur,Tenkasi-627803</address>
-                </div>
+                </div>   
               </div>
             </div>
           </div>
@@ -491,8 +398,8 @@
                 <li><a href="https://www.facebook.com/profile.php?id=61578901435182">Facebook</a></li>
                 <li><a href="https://x.com/Kasi_branded">Twitter</a></li>
                 <li><a href="https://www.instagram.com/eren_kasi/">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/kasi-vishwanathan-p-203349327/">LinkedIN</a></li>
-                <li><a href="https://github.com/kasivishwanathan007">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/kasivishwanathanp/">LinkedIN</a></li>
+                <li><a href="https://github.com/KasiDEVX">GitHub</a></li>
               </ul>
               <p class="site-copyright">
                 <small> All Rights Reserved | EREN @ 2025</small>

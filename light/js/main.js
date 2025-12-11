@@ -682,4 +682,13 @@ var animateReveal = function() {
 	}
 
 }
+function openModal(src) {
+  document.getElementById("certModal").style.display = "flex";
+  document.getElementById("fullCert").src = src;
+}
+
+function closeModal() {
+  document.getElementById("certModal").style.display = "none";
+}
+
 
